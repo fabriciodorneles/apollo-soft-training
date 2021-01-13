@@ -2,27 +2,20 @@ import gql from 'graphql-tag';
 
 export const USER_QUERY = gql`
 {
-    usuario(filter: { id: "KAZUMI" }) {
-        id
-        nome
-        genero
-        documento
-        contato {
-          email
-          telefone
-        }
+  usuario(filter: { id: "KAZUMI" }) {
+      id
+      nome
+      genero
+      documento
+      contato {
         email
-        cargo {
-          descricao
-        }      
-    }
-}
-`;
-
-export const LOTACAO = gql`
-{
-    usuario {
-          lotacao_principal {
+        telefone
+      }
+      email
+      cargo {
+        descricao
+      }
+      lotacao_principal {
         id_foro
         descricao
         foro {
@@ -30,7 +23,7 @@ export const LOTACAO = gql`
             nome
           }
         }
-      }
-    }
+      }      
   }
-`
+}
+`;

@@ -7,7 +7,7 @@ import {token,url} from './token'
 const authLink = setContext((_, { headers }) => ({
     headers: {
         ...headers,
-        lotacao: 1,
+        lotacao: 6,
         authorization: token
     }
 }));
